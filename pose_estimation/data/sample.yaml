@@ -1,0 +1,56 @@
+bed:
+  image_point:
+  - 352
+  - 347
+  world_point:
+  - 56.0
+  - 0.0
+  - 0.0
+camera:
+  image_point:
+  - 218
+  - 241
+  world_point:
+  - 28.0
+  - 14.5
+  - 29.0
+camera_neck:
+  image_point:
+  - 221
+  - 275
+  world_point:
+  - 28.0
+  - 14.5
+  - 22.5
+flask:
+  image_point:
+  - 42
+  - 459
+  world_point:
+  - 0.0
+  - 28.5
+  - 0.0
+open_space:
+  image_point:
+  - 399
+  - 420
+  world_point:
+  - 56.0
+  - 29.0
+  - 0.0
+origin:
+  image_point:
+  - 79
+  - 369
+  world_point:
+  - 0.0
+  - 0.0
+  - 0.0
+top:
+  image_point:
+  - 57
+  - 166
+  world_point:
+  - 0.0
+  - 0.0
+  - 40.5
