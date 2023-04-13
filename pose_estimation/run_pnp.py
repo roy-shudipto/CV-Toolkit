@@ -28,7 +28,9 @@ def pnp_calc():
         exit(1)
 
     # test: world-point to image-point
-    logger.info("Starting to run test with Opencv->projectPoints.")
+    logger.info(
+        "Starting to run calculation and validation for world-point to image-point."
+    )
     (image_point_calc, _) = cv2.projectPoints(
         np.array([d.WORLD_POINT_VAL]),
         rotation_vector,
@@ -37,9 +39,9 @@ def pnp_calc():
         np.array(d.DISTORTION_COEFFICIENT, dtype=np.float32),
     )
     logger.info(f"Calculated image-point: {image_point_calc[0][0].astype(int)}")
-    logger.info(f"Ground truth image-point: {d.IMAGE_POINT_VAL}")
+    logger.info(f"Ground-truth image-point: {d.IMAGE_POINT_VAL}")
 
-    # calculation and validation for image-point to world-point
+    # test: image-point to world-point
     logger.info(
         "Starting to run calculation and validation for image-point to world-point."
     )
@@ -66,7 +68,7 @@ def pnp_calc():
     )  # 3x1
     world_point_mat = np.round(world_point_mat.flatten(), decimals=1)
     logger.info(f"Calculated world-point: {world_point_mat.tolist()}")
-    logger.info(f"Ground truth image-point: {d.WORLD_POINT_VAL}")
+    logger.info(f"Ground-truth world-point: {d.WORLD_POINT_VAL}")
 
 
 if __name__ == "__main__":
