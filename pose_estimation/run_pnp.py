@@ -52,6 +52,7 @@ def pnp_calc():
         (3, 1)
     )  # 3x1
 
+    # reference: https://stackoverflow.com/questions/12299870/computing-x-y-coordinate-3d-from-image-point
     left_side_mat = np.matmul(
         np.matmul(np.linalg.inv(rotation_mat), np.linalg.inv(camera_mat)),
         image_point_mat,
